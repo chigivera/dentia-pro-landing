@@ -1,15 +1,18 @@
-// src/components/hero-section.tsx
-
 "use client"
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import AutoScrollSlider from "./auto-scroll-slider"
+
+const items = ["/img/slider.jpg", "/img/slider2.jpg", "/img/slider3.jpg"]
 
 export function HeroSection() {
   return (
     <section id="hero" className="relative py-20 overflow-hidden md:py-32">
-      <div className="container">
+      {/* Background slider */}
+      <AutoScrollSlider items={items} />
+
+      <div className="container relative">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +28,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
             >
-              Optimisez votre cabinet dentaire avec Dentia Pro
+              Optimisez votre cabinet dentaire avec DentiaPro
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -42,12 +45,8 @@ export function HeroSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button
-                size="lg"
-                className="bg-blue-500 hover:bg-blue-600"
-          
-              >
-                Essai gratuit 14 jours
+              <Button size="lg" className="border-blue-200 dark:border-blue-700 hover:bg-blue-600">
+              Réserver une Démo
               </Button>
             </motion.div>
           </motion.div>
@@ -58,11 +57,11 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative h-[400px] w-full lg:h-[600px]"
           >
-            <Image src="/placeholder.svg" alt="Dashboard Dentia Pro" fill className="object-contain" priority />
+            {/* This div is now empty, acting as a placeholder for layout purposes */}
           </motion.div>
         </div>
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50/50 to-white dark:from-blue-950/50 dark:to-background" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-50/50 to-transparent dark:from-blue-950/50 dark:to-background" />
     </section>
   )
 }

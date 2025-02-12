@@ -1,37 +1,32 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
-// import { motion } from "framer-motion"
+import type { Metadata } from "next"
+import "./globals.css"
+import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google"
+import type React from "react"
 
-import { ThemeProvider } from "@/components/theme-provider";
-import { FloatingPaths } from "@/components/floating-paths";
+import { ThemeProvider } from "@/components/theme-provider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
-  title: "Dentia Pro - CRM pour dentistes",
-  description: "Solution de gestion de cabinet dentaire nouvelle génération",
-};
+  title: "DentiaPro - CRM pour cabinets dentaires",
+  description: "Solution de gestion avancée pour cabinets dentaires : patients, documents, paiements et rendez-vous",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html 
-      lang="fr" 
-      className={`${geistSans.variable} ${geistMono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="fr" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -44,31 +39,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-white dark:bg-slate-950">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-     
-
-      
-       
-
-          <div
-            className="relative overflow-hidden transition-shadow duration-300 shadow-lg group "
-            >
-            {/*  bg-gradient-to-b from-black/10 to-white/10 dark:from-white/10 dark:to-black/10 rounded-2xl backdrop-blur-lg hover:shadow-xl */}
-             <div className="absolute inset-0">
-        <FloatingPaths position={-1} />
-     
-
-      </div>
-          {children}
-          </div>
+      <body className="antialiased bg-blue-50 dark:bg-blue-900">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <div className="relative min-h-screen overflow-hidden">{children}</div>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
+

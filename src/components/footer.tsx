@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 export function Footer() {
   return (
     <footer className="border-t bg-gray-50 dark:bg-gray-900/50">
-      <div className="container py-12">
+      <div className="container py-12 ">
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold">Newsletter</h3>
@@ -62,7 +62,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 mt-8 text-sm text-center border-t text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Dentia Pro. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} DentiaPro. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

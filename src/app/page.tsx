@@ -1,12 +1,14 @@
-// src/app/page.tsx
-
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { Features } from "@/components/features"
-import { Testimonials } from "@/components/testimonials"
 import { PricingTable } from "@/components/pricing-table"
-import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
+import Saas from "@/components/saas"
+import WhoWeAre from "@/components/whoweare"
+import Contact from "@/components/contact"
+import MetricsSection from "@/components/metrics-section"
+import FeatureDetails from "@/components/features-details"
+import { FloatingPaths } from "@/components/floating-paths"
 
 export default function Home() {
   return (
@@ -14,10 +16,22 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 pt-16">
         <HeroSection />
-        <Features />
-        <Testimonials />
-        <PricingTable />
-        <FaqSection />
+        <WhoWeAre />
+        <div className="relative">
+          <FloatingPaths />
+          <MetricsSection />
+        </div>
+        <Saas />
+        <div className="relative">
+          <FloatingPaths />
+          <Features />
+        </div>
+        <FeatureDetails />
+        <div className="relative">
+          <FloatingPaths />
+          <PricingTable />
+        </div>
+        <Contact />
       </main>
       <Footer />
     </div>

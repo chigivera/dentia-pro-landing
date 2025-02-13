@@ -1,3 +1,5 @@
+// src/components/auto-scroll-slider.tsx
+
 "use client"
 
 import type React from "react"
@@ -33,7 +35,15 @@ const AutoScrollSlider: React.FC<AutoScrollSliderProps> = ({ items }) => {
       <div ref={sliderRef} className="flex h-full transition-transform duration-500 ease-in-out">
         {items.map((item, index) => (
           <div key={index} className="flex items-center justify-center min-w-full">
-            <img src={item || "/placeholder.svg"} alt={`Slide ${index + 1}`} className="object-cover w-full h-full" />
+           <div
+          className="relative w-full h-full"
+          style={{
+            backgroundImage: `url(${item})`,
+            backgroundPosition: "80% center", // Positions the doctor more towards the right
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
           </div>
         ))}
       </div>

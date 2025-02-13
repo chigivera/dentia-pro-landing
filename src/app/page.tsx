@@ -1,7 +1,8 @@
+// src/app/page.tsx
+
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { Features } from "@/components/features"
-import { PricingTable } from "@/components/pricing-table"
 import { Footer } from "@/components/footer"
 import Saas from "@/components/saas"
 import WhoWeAre from "@/components/whoweare"
@@ -16,21 +17,18 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 pt-16">
         <HeroSection />
-        <WhoWeAre />
         <div className="relative">
-          <FloatingPaths />
-          <MetricsSection />
+        <FloatingPaths position={1} />
+        <WhoWeAre />
         </div>
+          <MetricsSection />
         <Saas />
         <div className="relative">
-          <FloatingPaths />
+        <FloatingPaths position={-1} />
           <Features />
         </div>
         <FeatureDetails />
-        <div className="relative">
-          <FloatingPaths />
-          <PricingTable />
-        </div>
+      
         <Contact />
       </main>
       <Footer />

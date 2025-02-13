@@ -1,3 +1,5 @@
+// src/components/features.tsx
+
 "use client"
 
 import { motion } from "framer-motion"
@@ -39,7 +41,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 bg-blue-50 dark:bg-blue-900">
+    <section id="features" className="py-20 bg-blue-50/50 dark:bg-blue-900">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

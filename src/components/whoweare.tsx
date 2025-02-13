@@ -1,3 +1,5 @@
+// src/components/whoweare.tsx
+
 "use client"
 
 import Image from "next/image"
@@ -5,7 +7,7 @@ import { motion } from "framer-motion"
 
 export default function WhoWeAre() {
   return (
-    <section id="whoweare" className="container px-4 py-16 mx-auto bg-blue-50 dark:bg-blue-900">
+    <section id="whoweare" className="container px-4 py-16 mx-auto bg-blue-50/50 dark:bg-blue-900">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -50 }}

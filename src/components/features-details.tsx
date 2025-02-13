@@ -1,3 +1,5 @@
+// src/components/features-details.tsx
+
 "use client"
 
 import Image from "next/image"
@@ -7,7 +9,7 @@ import { motion } from "framer-motion"
 
 export default function FeatureDetails() {
   return (
-    <div className="px-4 py-16 bg-blue-50 dark:bg-blue-900 md:px-6 lg:px-8">
+    <div className="px-4 py-16 bg-slate-50 dark:bg-blue-900 md:px-6 lg:px-8">
       <div className="mx-auto space-y-24 max-w-7xl">
         {/* Claims Tracker Section */}
         <Section

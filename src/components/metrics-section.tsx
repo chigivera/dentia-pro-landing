@@ -1,3 +1,5 @@
+// src/components/metrics-section.tsx
+
 "use client"
 
 import { Card } from "@/components/ui/card"
@@ -40,7 +42,7 @@ interface MetricCardProps {
 function MetricCard({ icon, value, label }: MetricCardProps) {
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-      <Card className="p-6 text-center text-white border-none bg-blue-700/50 backdrop-blur-sm">
+      <Card className="h-full p-6 text-center text-white border-none bg-blue-700/50 backdrop-blur-sm">
         <div className="flex flex-col items-center gap-4">
           <div className="p-4 rounded-full bg-white/10">{icon}</div>
           <div>

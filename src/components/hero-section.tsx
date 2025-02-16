@@ -65,7 +65,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-1 bg-gradient-to-r from-white from-20% to-60% to-transparent dark:from-blue-950/50 dark:to-background" />
+      <div className="hidden lg:block absolute inset-0 z-1 bg-gradient-to-r from-white from-20% to-60% to-transparent dark:from-blue-950/50 dark:to-background" />
     </section>
   )
 }

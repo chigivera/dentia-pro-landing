@@ -18,7 +18,7 @@ export default function StatsSection() {
                     <div className="text-2xl font-semibold text-blue-700 lg:text-white sm:text-xl">Moins de rendez-vous manqués</div>
                 </div>
                 <div className="space-y-2">
-                    <div className="text-6xl font-bold text-blue-700 lg:text-white sm:text-5xl">20%</div>
+                    <div className="text-6xl font-bold text-blue-700 lg:text-white sm:text-5xl">42%</div>
                     <div className="text-2xl font-semibold text-blue-700 lg:text-white sm:text-xl">Augmentation de la fidélisation</div>
                 </div>
                 <div className="space-y-2">

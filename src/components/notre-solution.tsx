@@ -1,11 +1,17 @@
+// src/components/notre-solution.tsx
+
+// src/components/NotreSolution.tsx
+
+// src/components/saas.tsx
+
 "use client"
 
 import { motion } from "framer-motion"
 import MacbookComponent from "./macbook-component"
 
-export default function Saas() {
+export default function NotreSolution() {
   return (
-    <div className="min-h-screen py-16 bg-gradient-to-b from-blue-100 to-white dark:from-blue-900 dark:to-blue-800">
+    <div id="notre-solution" className="min-h-screen py-16 bg-gradient-to-b from-blue-100 to-white dark:from-blue-900 dark:to-blue-800">
       <div className="container px-4 mx-auto">
         {/* Hero Content */}
         <motion.div
@@ -31,7 +37,7 @@ export default function Saas() {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
           >
-            Réserver une Démo
+            Profiter dès maintenant
           </motion.button>
         </motion.div>
 

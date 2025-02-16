@@ -49,14 +49,14 @@ export function HeroSection() {
                 className="px-8 text-white bg-blue-600 hover:bg-blue-700"
               
               >
-                Réserver une Démo
+                Profiter dès maintenant
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </div>
 
-      <div className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-50/50 to-transparent dark:from-blue-950/50 dark:to-background" />
+      {/* <div className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-50/50 to-transparent dark:from-blue-950/50 dark:to-background" /> */}
     </section>
   )
 }

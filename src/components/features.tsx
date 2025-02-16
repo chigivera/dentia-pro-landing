@@ -4,40 +4,46 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users, Calendar, BarChartIcon as ChartBar, Shield, Clock, CreditCard } from "lucide-react"
+import icon1 from "@/assets/icons/icon-1.svg";
+import icon2 from "@/assets/icons/icon-2.svg";
+import icon3 from "@/assets/icons/icon-3.svg";
+import icon4 from "@/assets/icons/icon-4.svg";
+import icon5 from "@/assets/icons/icon-5.svg";
+import icon6 from "@/assets/icons/icon-6.svg";
 
 const features = [
   {
-    title: "Gestion des patients",
+    title: "Créer des dossiers de santé électroniques",
     description: "Dossiers patients centralisés et sécurisés",
-    icon: Users,
+    icon: icon1,
   },
   {
-    title: "Planification intelligente",
+    title: "Planifier des rendez-vous",
     description: "Gestion avancée des rendez-vous et rappels automatiques",
-    icon: Calendar,
+    icon: icon2,
   },
   {
-    title: "Analyses détaillées",
-    description: "Tableaux de bord et statistiques de performance",
-    icon: ChartBar,
+    title: "Envoyer des rappels automatisés",
+    description: "Notifications automatiques pour réduire les absences",
+    icon: icon3,
   },
   {
-    title: "Sécurité RGPD",
-    description: "Protection des données conforme aux normes en vigueur",
-    icon: Shield,
+    title: "Élaborer des plans de traitement",
+    description: "Création et suivi des plans de soins personnalisés",
+    icon: icon4,
   },
   {
-    title: "Gain de temps",
-    description: "Automatisation des tâches administratives",
-    icon: Clock,
+    title: "Gérer votre inventaire",
+    description: "Suivi et gestion des stocks en temps réel",
+    icon: icon5,
   },
   {
-    title: "Gestion financière",
+    title: "Suivre vos revenus",
     description: "Facturation intégrée et suivi des paiements",
-    icon: CreditCard,
+    icon: icon6,
   },
-]
+];
+
 
 export function Features() {
   return (
@@ -57,7 +63,7 @@ export function Features() {
             Tout ce dont vous avez besoin pour gérer efficacement votre cabinet dentaire
           </p>
         </motion.div>
-        <div className="grid gap-6 mt-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 px-20 mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -66,9 +72,9 @@ export function Features() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full transition-shadow bg-white hover:shadow-lg dark:bg-blue-800">
+              <Card className="items-center h-full text-center transition-shadow bg-white hover:shadow-lg dark:bg-blue-800">
                 <CardHeader>
-                  <feature.icon className="w-10 h-10 text-blue-600 dark:text-blue-300" />
+                  <feature.icon className="self-center w-24 h-24 mb-5 text-blue-600 dark:text-blue-300" />
                   <CardTitle className="mt-4 text-blue-900 dark:text-blue-100">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>

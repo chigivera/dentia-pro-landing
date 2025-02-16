@@ -1,3 +1,5 @@
+// src/components/navbar.tsx
+
 "use client"
 
 import { useState, useEffect } from "react"
@@ -10,9 +12,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const navItems = [
   { name: "Accueil", href: "#hero" },
-  { name: "Qui sommes-nous", href: "#whoweare" },
+  { name: "Notre Solution", href: "#notre-solution" },
   { name: "Fonctionnalités", href: "#features" },
-  { name: "Tarifs", href: "#pricing" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -81,7 +82,7 @@ export function Navbar() {
           ))}
           <li>
             <Button onClick={() => scrollToSection("#contact")} className="text-white bg-blue-600 hover:bg-blue-700">
-            Réserver une Démo
+            Profiter dès maintenant
 
             </Button>
           </li>
@@ -133,7 +134,7 @@ export function Navbar() {
                   onClick={() => scrollToSection("#contact")}
                   className="w-full text-white bg-blue-600 hover:bg-blue-700"
                 >
-                    Réserver une Démo
+                    Profiter dès maintenant
                 </Button>
               </li>
             </ul>

@@ -1,3 +1,5 @@
+// src/components/contact.tsx
+
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -38,8 +40,9 @@ export default function Contact() {
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Input type="tel" placeholder="Téléphone" className="bg-blue-50 dark:bg-blue-700" />
-                  <Input type="date" className="bg-blue-50 dark:bg-blue-700" />
+                  <Input type="date"  className="bg-blue-50 dark:bg-blue-700" />
                 </div>
+                <Input type="address" placeholder="Address" className="bg-blue-50 dark:bg-blue-700" />
                 <Textarea
                   placeholder="Écrivez votre message ici..."
                   className="bg-blue-50 dark:bg-blue-700 min-h-[120px]"

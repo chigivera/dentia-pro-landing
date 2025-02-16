@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useScrollSpy } from "@/hooks/use-scroll-spy"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Image from "next/image"
 
 const navItems = [
   { name: "Accueil", href: "#hero" },
@@ -53,14 +53,7 @@ export function Navbar() {
     >
       <nav className="container flex items-center justify-between h-16">
         <a href="#" className="flex items-center text-xl font-bold text-blue-900 dark:text-blue-100">
-        <Avatar className="mr-3">
-  <AvatarImage src="/logo.png" />
-  <AvatarFallback>DP</AvatarFallback>
-</Avatar>
-        <span className="text-blue-700">
-        Dentia
-        </span>
-          Pro
+          <Image src="/logo.png" alt="DentiaPro" width={150} height={40} />
         </a>
 
         {/* Desktop Navigation */}
@@ -82,7 +75,7 @@ export function Navbar() {
           ))}
           <li>
             <Button onClick={() => scrollToSection("#contact")} className="text-white bg-blue-600 hover:bg-blue-700">
-            Profiter dès maintenant
+            Réserver une Démo
 
             </Button>
           </li>
@@ -134,7 +127,7 @@ export function Navbar() {
                   onClick={() => scrollToSection("#contact")}
                   className="w-full text-white bg-blue-600 hover:bg-blue-700"
                 >
-                    Profiter dès maintenant
+                    Réserver une Démo
                 </Button>
               </li>
             </ul>

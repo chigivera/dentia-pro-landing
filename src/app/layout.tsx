@@ -4,7 +4,7 @@ import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google"
 import type React from "react"
 
 import { ThemeProvider } from "@/components/theme-provider"
-import { Preloader } from "@/components/preloader"
+// import { Preloader } from "@/components/preloader"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +42,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-blue-50 dark:bg-blue-900">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Preloader />
           <div className="relative min-h-screen overflow-hidden">{children}</div>
         </ThemeProvider>
       </body>

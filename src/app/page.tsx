@@ -25,10 +25,10 @@ export default function Home() {
         <FloatingPaths position={1} />
         <WhoWeAre />
         </div> */}
-        <NotreSolution />
         <div className="relative">
         <FloatingPaths position={-1} />
           <Features />
+        <NotreSolution />
         </div>
         <FeatureDetails />
       

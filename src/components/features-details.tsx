@@ -29,7 +29,7 @@ export default function FeatureDetails() {
         <Section
           title="Affichage des Paiements"
           description="Notre portail d'Affichage des Paiements aide les agents A/R à explorer les rapports bancaires et les chèques manuels des comptes bancaires à traiter par le bot."
-          imageSrc="/mockup2.png"
+          imageSrc="/mockup3.png"
           imageAlt="Interface d'Affichage des Paiements"
           features={[
             "SoT traite le paiement et récupère les données EOB du Portail du Payeur.",
@@ -46,7 +46,7 @@ export default function FeatureDetails() {
         <Section
           title="Système de Rendez-vous en Ligne"
           description="Simplifiez la prise de rendez-vous pour vos patients et votre personnel avec notre système de rendez-vous en ligne intuitif."
-          imageSrc="/mockup3.png"
+          imageSrc="/mockup2.png"
           imageAlt="Interface du Système de Rendez-vous en Ligne"
           features={[
             "Rationalise l'ensemble du processus de planification des rendez-vous pour le personnel.",
@@ -83,17 +83,17 @@ function Section({ title, description, imageSrc, imageAlt, features, imageLeft =
         transition={{ duration: 0.5 }}
         className={`space-y-6 ${!imageLeft && "lg:order-2"}`}
       >
-        <h2 className="text-2xl font-bold tracking-tight text-blue-900 dark:text-blue-100 sm:text-3xl">{title}</h2>
-        <p className="text-blue-700 dark:text-blue-200">{description}</p>
+        <h2 className="text-2xl font-bold tracking-tight text-blue-700 dark:text-blue-100 sm:text-3xl">{title}</h2>
+        <p className="text-blue-900 dark:text-blue-200">{description}</p>
         <ul className="space-y-4">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <Check className="w-5 h-5 mt-1 text-blue-500" />
-              <span className="text-blue-800 dark:text-blue-200">{feature}</span>
+            <li key={index} className="block space-x-2">
+              <Check className="inline mb-1 text-xl text-blue-500 " />
+              <span className="text-black dark:text-blue-200">{feature}</span>
             </li>
           ))}
         </ul>
-        <Button variant="outline" className="rounded-full">
+        <Button variant="outline" className="text-white bg-blue-700 rounded-full">
           En savoir plus
         </Button>
       </motion.div>

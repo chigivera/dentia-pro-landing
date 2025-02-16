@@ -4,18 +4,27 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import AutoScrollSlider from "./auto-scroll-slider"
+// import AutoScrollSlider from "./auto-scroll-slider"
 
-const items = ["/img/slider.jpg", "/img/slider2.jpg", "/img/slider3.jpg"]
+// const items = ["/img/slider3.jpg", "/img/slider3.jpg", "/img/slider3.jpg"]
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative py-20 overflow-hidden md:py-32">
+    <section id="hero" className="relative py-20 overflow-hidden md:py-32"
+    style={{
+      backgroundImage: `url(/img/slider3.jpg)`,
+      backgroundPosition: "80% center", // Positions the doctor more towards the right
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }}
+    >
       {/* Background slider */}
-      <AutoScrollSlider items={items} />
+      {/* <AutoScrollSlider items={items} /> */}
 
-      <div className="relative z-10 flex h-[50svh] w-full flex-col justify-center items-center lg:items-start">
-        <div className="w-full max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="relative z-10 flex h-[50svh] w-full flex-col justify-center items-center lg:items-start"
+     
+      >
+        <div className="z-10 w-full max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
           <motion.div
             className="max-w-2xl py-16 mx-auto text-center lg:text-left lg:mx-0 sm:py-20 lg:py-24"
             initial={{ opacity: 0, y: 20 }}
@@ -49,14 +58,14 @@ export function HeroSection() {
                 className="px-8 text-white bg-blue-600 hover:bg-blue-700"
               
               >
-                Profiter dès maintenant
+                Réserver une Démo
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </div>
 
-      {/* <div className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-50/50 to-transparent dark:from-blue-950/50 dark:to-background" /> */}
+      <div className="absolute inset-0 z-1 bg-gradient-to-r from-white from-20% to-60% to-transparent dark:from-blue-950/50 dark:to-background" />
     </section>
   )
 }

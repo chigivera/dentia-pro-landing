@@ -11,16 +11,16 @@ import MacbookComponent from "./macbook-component"
 
 export default function NotreSolution() {
   return (
-    <div id="notre-solution" className="min-h-screen py-16 bg-gradient-to-b from-blue-100 to-white dark:from-blue-900 dark:to-blue-800">
+    <div id="notre-solution" className="min-h-screen py-16 ">
       <div className="container px-4 mx-auto">
         {/* Hero Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-12 text-center"
+          className="text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold text-blue-900 dark:text-blue-100 md:text-5xl">
+          <h2 className="mb-12 text-4xl font-bold text-blue-900 dark:text-blue-100 md:text-5xl">
             <span className="relative">
               Solutions SaaS Basées sur le Cloud
               <span className="absolute left-0 w-full h-3 bottom-1 bg-blue-200/40 dark:bg-blue-700/40 -z-10"></span>
@@ -28,16 +28,16 @@ export default function NotreSolution() {
             pour Votre <br className="md:hidden" />
             Cabinet Dentaire
           </h2>
-          <p className="max-w-2xl mx-auto mb-8 text-blue-700 dark:text-blue-200">
+          {/* <p className="max-w-2xl mx-auto mb-8 text-blue-700 dark:text-blue-200">
             Les solutions SaaS robustes basées sur le cloud de DentiaPro sont là pour transformer la façon dont votre
             cabinet dentaire et vos DSO fonctionnent.
-          </p>
+          </p> */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
           >
-            Profiter dès maintenant
+            Réserver une Démo
           </motion.button>
         </motion.div>
 

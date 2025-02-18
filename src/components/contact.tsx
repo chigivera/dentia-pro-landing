@@ -105,7 +105,7 @@ export default function Contact() {
                     className="bg-blue-50 dark:bg-blue-700"
                   />
                   <Input
-                    type="date"
+                    type="datetime-local"
                     name="date"
                     value={formData.date}
                     onChange={handleChange}

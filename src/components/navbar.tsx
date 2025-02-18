@@ -1,7 +1,5 @@
 // src/components/navbar.tsx
-
 "use client"
-
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -55,7 +53,6 @@ export function Navbar() {
         <a href="#" className="flex items-center text-xl font-bold text-blue-900 dark:text-blue-100">
           <Image src="/logo.png" alt="DentiaPro" width={150} height={40} />
         </a>
-
         {/* Desktop Navigation */}
         <ul className="items-center hidden gap-8 md:flex">
           {navItems.map((item) => (
@@ -63,24 +60,26 @@ export function Navbar() {
               <button
                 onClick={() => scrollToSection(item.href)}
                 className={cn(
-                  "text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-300",
-                  activeSection === item.href.replace("#", "")
-                    ? "text-blue-600 dark:text-blue-300 font-medium"
-                    : "text-blue-700 dark:text-blue-200",
+                  "relative text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-300",
+                  activeSection === item.href.replace("#", "") && "font-bold text-blue-600",
                 )}
               >
                 {item.name}
+                {activeSection === item.href.replace("#", "") && (
+                  <motion.span
+                    layoutId="underline"
+                    className="absolute -bottom-2 left-0 right-0 h-0.5  bg-blue-600 dark:bg-blue-300 rounded"
+                  />
+                )}
               </button>
             </li>
           ))}
           <li>
             <Button onClick={() => scrollToSection("#contact")} className="text-white bg-blue-600 hover:bg-blue-700">
-            Réserver une Démo
-
+              Réserver une Démo
             </Button>
           </li>
         </ul>
-
         {/* Mobile Menu Button */}
         <Button
           variant="ghost"
@@ -95,7 +94,6 @@ export function Navbar() {
           )}
         </Button>
       </nav>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -112,13 +110,17 @@ export function Navbar() {
                   <button
                     onClick={() => scrollToSection(item.href)}
                     className={cn(
-                      "text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-300",
-                      activeSection === item.href.replace("#", "")
-                        ? "text-blue-600 dark:text-blue-300 font-medium"
-                        : "text-blue-700 dark:text-blue-200",
+                      "relative text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-300",
+                      activeSection === item.href.replace("#", "") && "font-bold",
                     )}
                   >
                     {item.name}
+                    {activeSection === item.href.replace("#", "") && (
+                      <motion.span
+                        layoutId="underline"
+                        className="absolute -bottom-3 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-300 rounded"
+                      />
+                    )}
                   </button>
                 </li>
               ))}
@@ -127,7 +129,7 @@ export function Navbar() {
                   onClick={() => scrollToSection("#contact")}
                   className="w-full text-white bg-blue-600 hover:bg-blue-700"
                 >
-                    Réserver une Démo
+                  Réserver une Démo
                 </Button>
               </li>
             </ul>
@@ -137,4 +139,3 @@ export function Navbar() {
     </motion.header>
   )
 }
-

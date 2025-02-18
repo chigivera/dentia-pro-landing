@@ -9,6 +9,13 @@ import { Button } from "@/components/ui/button"
 // const items = ["/img/slider3.jpg", "/img/slider3.jpg", "/img/slider3.jpg"]
 
 export function HeroSection() {
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
   return (
     <section id="hero" className="relative py-20 overflow-hidden md:py-32"
     style={{
@@ -56,7 +63,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 className="px-8 text-white bg-blue-600 hover:bg-blue-700"
-              
+                onClick={() => scrollToSection("#contact")}
               >
                 Réserver une Démo
               </Button>

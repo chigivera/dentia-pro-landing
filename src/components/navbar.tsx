@@ -51,7 +51,7 @@ export function Navbar() {
     >
       <nav className="container flex items-center justify-between h-16">
         <a href="#" className="flex items-center text-xl font-bold text-blue-900 dark:text-blue-100">
-          <Image src="/logo.png" alt="DentiaPro" width={150} height={40} />
+          <Image src="/logo.png" alt="DentiaPro" width={200} height={40} />
         </a>
         {/* Desktop Navigation */}
         <ul className="items-center hidden gap-8 md:flex">

@@ -10,6 +10,12 @@ import { motion } from "framer-motion"
 import MacbookComponent from "./macbook-component"
 
 export default function NotreSolution() {
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
   return (
     <div id="notre-solution" className="min-h-screen py-16 ">
       <div className="container px-4 mx-auto">
@@ -36,6 +42,8 @@ export default function NotreSolution() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
+            onClick={() => scrollToSection("#contact")}
+
           >
             Réserver une Démo
           </motion.button>

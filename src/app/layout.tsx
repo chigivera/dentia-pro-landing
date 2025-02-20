@@ -1,20 +1,12 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google"
+import { Inter } from 'next/font/google'
 import type React from "react"
 
 import { ThemeProvider } from "@/components/theme-provider"
 // import { Preloader } from "@/components/preloader"
+const inter = Inter({ subsets: ['latin'] })
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 export const metadata: Metadata = {
   title: "Dentia Pro - CRM pour cabinets dentaires",
@@ -27,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
